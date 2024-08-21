@@ -1,0 +1,44 @@
+input[type = text]
+{
+    width: 15ch;
+}
+
+input[type = number]
+{
+    width: 10ch;
+}
+
+.character_info_list
+{
+    list-style:  none;
+    height: 8rem;
+
+    margin-top: 0;
+    padding: 1rem;
+
+    border : 1px solid black;
+    border-radius : 5px;
+
+    display : grid;
+    grid-template-columns: 10rem 10rem 10rem;
+}
+
+.character_name
+{
+    height: 5rem;
+    padding : 1rem;
+
+    border : 1px solid black;
+    border-radius : 5px;
+    margin-right: -5px;
+
+    align-self: center;
+}
+
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
