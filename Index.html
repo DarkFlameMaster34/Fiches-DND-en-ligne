@@ -8,54 +8,334 @@
     </head>
     <body>
         <header>
+            <div>
+            </div>
             <div class = "character_name">
                 <!--Name of the character-->
-                <input type="text" id="name" name = "name" size = 10/>
-                <label for="name"><br>Character Name</label>
+                <div>
+                    <input type="text" id="name" name = "name" size = "20/>
+                    <label for="name"><br>Character Name</label>
+                </div>
             </div>
 
             <div class = "character_infos">
-                <ul class = "character_info_list">
-                    <!--Class & level of the character-->
-                    <li>
-                        <input type="text" id="class_level" name = "class_level" size = "10"/>
-                        <label for="class"><br>Class & Level</label>
-                    </li>
 
-                    <!-- Character background-->
-                     <li>
-                        <input type="text" id="background" name = "background" size = "10"/>
-                        <label for="background"><br>Background</label>
-                    </li>
-
-                    <li>
-                        <!--Player Name-->
-                        <input type="text" id="player_name" name = "player_name" size = "10"/>
-                        <label for="player_name"><br>Player Name</label>
-                    </li>
-                     
-                    <li>
-                        <!--Character race-->
-                        <input type="text" id="race" name = "race" size = "10"/>
-                        <label for="race"><br>Race</label>
-                    </li>
+                    <ul class = "character_info_list">
+                        <!--Class & level of the character-->
+                        <li>
+                            <input type="text" id="class_level" name = "class_level" size = "10"/>
+                            <label for="class"><br>Class & Level</label>
+                        </li>
                         
-                    <li>  
-                        <!--Character alignment-->
-                        <input type="text" id="alignment" name = "aligment" size = "10"/>
-                        <label for="name"><br>Aligment</label>
-                    </li>
-                    
-                    <li>
-                        <!--Character experience points-->
-                        <input type="number" id="exp" name = "exp" size = "10" min="0"/>
-                        <label for="exp"><br>Experience points</label>
-                    </li>
-                </ul>
+                        <!-- Character background-->
+                        <li>
+                            <input type="text" id="background" name = "background"/>
+                            <label for="background"><br>Background</label>
+                        </li>
+                        
+                        <li>
+                            <!--Player Name-->
+                            <input type="text" id="player_name" name = "player_name"/>
+                            <label for="player_name"><br>Player Name</label>
+                        </li>
+                        
+                        <li>
+                            <!--Character race-->
+                            <input type="text" id="race" name = "race"/>
+                            <label for="race"><br>Race</label>
+                        </li>
+                        
+                        <li>  
+                            <!--Character alignment-->
+                            <input type="text" id="alignment" name = "aligment" />
+                            <label for="name"><br>Aligment</label>
+                        </li>
+                        
+                        <li>
+                            <!--Character experience points-->
+                            <input type="number" id="exp" name = "exp" min="0"/>
+                            <label for="exp"><br>Experience points</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = character_image>
+                <img class = "character_portrait" src="C:\Users\verpo\Documents\Fiches-DND-en-ligne\Images\Astarion.jpg"/>
             </div>
             
         </header>
         <main>
+            <div class = "body">
+                <div class = "left_row">
+                    <div class = "left_row_top">
+                        <div class = "left_row_left">
+                            <div class = "stat_square">
+                                <label for="strength">Strength<br></label>
+                                <input type="number" class = "stat_input" id="strength" name = "strength" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                            
+                            <div  class = "stat_square">
+                                <label for="dexterity">Dexterity<br></label>
+                                <input type="number" class = "stat_input" id="dexterity" name = "dexterity" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                            
+                            <div  class = "stat_square">
+                                <label for="constitution">Constitution<br></label>
+                                <input type="number" class = "stat_input" id="constitution" name = "constitution" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                            
+                            <div  class = "stat_square">
+                                <label for="intelligence">Intelligence<br></label>
+                                <input type="number" class = "stat_input" id="intelligence" name = "intelligence" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                            
+                            <div  class = "stat_square">
+                                <label for="wisdom">Wisdom<br></label>
+                                <input type="number" class = "stat_input" id="wisdom" name = "wisdom" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                            
+                            <div  class = "stat_square">
+                                <label for="charisma">Charisma<br></label>
+                                <input type="number" class = "stat_input" id="charisma" name = "charisma" min="0" max = "20"/>
+                                
+                                <input id = "stat_bonus" name = "strength_bonus" class = "stat_bonus"/>
+                            </div>
+                        </div>
+                        
+                        <div class = "left_row_right">
+                            <div>
+                            <input id = "inspiration" name = 'inspiration'/>
+                            <label for="inspiration">Inspiration</label>
+                        </div>
+                        
+                        <div>
+                            <input id = "proficiency_bonus" name = 'proficiency_bonus'/>
+                            <label for="proficiency_bonus">proficiency bonus</label>
+                        </div>
+                        <div class = "saving_throws">
+                            <div class = "saving_throws_align_left">
+                                <input id = "strength_st" name = 'strength_st' type = "checkbox"/>
+                                <input id = "strength_st_stat" name = "strength_st_stat">
+                                <label for="strength_st">strength</label>
+                                <br>
+                                <input id = "dexterity_st" name = 'dexterity_st' type = "checkbox"/>
+                                <input id = "dexterity_st_stat" name = "dexterity_st_stat">
+                                <label for="dexterity_st">dexterity</label>
+                                <br>
+                                <input id = "constitution_st" name = 'constitution_st' type = "checkbox"/>
+                                <input id = "constitution_st_stat" name = "constitution_st_stat">
+                                <label for="constitution_st">constitution</label>
+                                <br>
+                                <input id = "intelligence_st" name = 'intelligence_st' type = "checkbox"/>
+                                <input id = "intelligence_st_stat" name = "intelligence_st_stat">
+                                <label for="intelligence_st">intelligence</label>
+                                <br>
+                                <input id = "wisdom_st" name = 'wisdom_st' type = "checkbox"/>
+                                <input id = "wisdom_st_stat" name = "wisdom_st_stat">
+                                <label for="wisdom_st">wisdom</label>
+                                <br>
+                                <input id = "charisma_st" name = 'charisma_st' type = "checkbox"/>
+                                <input id = "charisma_ststat" name = "charisma_st_stat">
+                                <label for="charisma_st">charisma</label>
+                            </div>
+                            <br>
+                            <strong><em>Saving throws</em></strong>
+                        </div>
+                        
+                        <div class = "skills">
+                            <div class = "skills_align_left">     
+                                <input id = "acrobatics" name = 'acrobatics' type = "checkbox"/>
+                                <input id = "acrobatics_stats" name = "acrobatics_stats">
+                                <label for="acrobatics">Acrobatics</label>
+                                <br>
+                                <input id = "animal_handling" name = 'animal_handling' type = "checkbox"/>
+                                <input id = "animal_handlings_stats" name = "animal_handling_stats">
+                                <label for="animal_handling">Animal handling</label>
+                                <br>
+                                <input id = "arcana" name = 'arcana' type = "checkbox"/>
+                                <input id = "arcana_stats" name = "arcana_stats">
+                                <label for="arcana">Arcana</label>
+                                <br>
+                                <input id = "athletics" name = 'athletics' type = "checkbox"/>
+                                <input id = "athletics_stats" name = "athletics_stats">
+                                <label for="athletics">Athletics</label>
+                                <br>
+                                <input id = "deception" name = 'deception' type = "checkbox"/>
+                                <input id = "deception_stats" name = "deception_stats">
+                                <label for="deception">Deception</label>
+                                <br>
+                                <input id = "history" name = 'history' type = "checkbox"/>
+                                <input id = "history_stats" name = "history_stats">
+                                <label for="history">History</label>
+                                <br>
+                                <input id = "insight" name = 'insight' type = "checkbox"/>
+                                <input id = "insight_stats" name = "insights_stats">
+                                <label for="insight">Insight</label>
+                                <br>
+                                <input id = "intimidation" name = 'intimidation' type = "checkbox"/>
+                                <input id = "intimidation_stats" name = "intimidation_stats">
+                                <label for="intimidation">Intimidation</label>
+                                <br>
+                                <input id = "investigation" name = 'investigation' type = "checkbox"/>
+                                <input id = "investigation_stats" name = "investigation_stats">
+                                <label for="investigation">Investigation</label>
+                                <br>
+                                <input id = "medecine" name = 'medecine' type = "checkbox"/>
+                                <input id = "medecine_stats" name = "medecine_stats">
+                                <label for="medecine">Medecine</label>
+                                <br>
+                                <input id = "nature" name = 'nature' type = "checkbox"/>
+                                <input id = "nature_stats" name = "nature_stats">
+                                <label for="nature">Nature</label>
+                                <br>
+                                <input id = "perception" name = 'perception' type = "checkbox"/>
+                                <input id = "perception_stats" name = "perception_stats">
+                                <label for="perception">Perception</label>
+                                <br>
+                                <input id = "performance" name = 'performance' type = "checkbox"/>
+                                <input id = "performance_stats" name = "performance_stats">
+                                <label for="performance">Performance</label>
+                                <br>
+                                <input id = "persuasion" name = 'persuasion' type = "checkbox"/>
+                                <input id = "persuasion_stats" name = "persuasion_stats">
+                                <label for="persuasion">Persuasion</label>
+                                <br>
+                                <input id = "religion" name = 'religion' type = "checkbox"/>
+                                <input id = "religion_stats" name = "religion_stats">
+                                <label for="religion">Religion</label>
+                                <br>
+                                <input id = "sleight_of_hand" name = 'sleight_of_hand' type = "checkbox"/>
+                                <input id = "sleight_of_hand_stats" name = "sleight_of_hand_stats">
+                                <label for="acrobatics">Sleight of hand</label>
+                                <br>
+                                <input id = "stealth" name = 'stealth' type = "checkbox"/>
+                                <input id = "stealth_stats" name = "stealth_stats">
+                                <label for="stealth">Stealth</label>
+                                <br>
+                                <input id = "survival" name = 'survival' type = "checkbox"/>
+                                <input id = "survival_stats" name = "survival_stats">
+                                <label for="survival">Survival</label>
+                            </div>
+                            <br>
+                            
+                            <br>
+                            <strong><em>Skills</em></strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "left_row_bot">
+                    <div>
+                        <input id = "perception_passive_widsom" type = "number" name = 'perception_passive_widsom' size = "3" min = "0"/>
+                        <label for="perception_passive_widsom">Passive wisdom (perception)</label>
+                    </div>
+
+                        <textarea id = "other_proficiencies"></textarea>
+                        <label for = "other_proficiencies">Other proficiencies & languages</label>
+                </div>
+            </div>
+                
+                <div class = "middle_row">
+                    <div class = "first_line">
+                        <div class = "first_line_button">
+                            <input id = "armor_class" name = 'armor_class' type = "number"/>
+                            <label for="armor_class">Armor class</label>
+                        </div>
+
+                        <div class = "first_line_button">
+                            <input id = "initiative" name = 'initiative'  type = "number"/>
+                            <label for="initiative">Initiative</label>
+                        </div>
+                            
+                        <div class = "first_line_button">
+                            <input id = "speed" name = 'speed'  type = "number"/>
+                            <label for="speed">Speed</label>
+                        </div>
+                    </div>
+
+                    <div class = "hitpoints">
+                        <div class = "current_hitpoints">
+                            <div>
+                                <label for = "hitpoints_max">Hit point maximum</label>
+                                <input id = "hitpoints_max" name = "hitpoints_max" type = "number"/>
+                            </div>
+
+                            <div>
+                                <input id = "current_hitpoints_input" name = "current_hitpoints" type = "number">
+                                <br>
+                                <label for  = "current_hitpoints_input"><strong><em>Current hit points</em></strong></label>
+                            </div>
+                        </div>
+
+                        <div class = "temp_hit_points">
+                            <div>
+                                <input id = "hitpoints_temp" name = "hitpoints_temp" type = "number"/>
+                                <br>
+                                <strong><em>Temporary hit points</em></strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "third_line">
+                        <div class = "hit_dice">
+                            <div>
+                                <label for = "hit_dice_total">Total</label>
+                                <input id = "hit_dice_total" name = "hit_dice_total"/>
+                            </div>
+
+
+                            <input id = "hit_dice_input" name = "hit_dice_input"/>
+                            <p>Hit dices</p>
+                        </div>
+
+                        <div class = "death_saves">
+                                <div class = "successes_save">
+                                    <p>successes</p>
+                                    <input id = "success_one" name = "success_one" type = "checkbox"/>
+                                    <input id = "success_two" name = "success_two" type = "checkbox"/>
+                                    <input id = "success_three" name = "success_three" type = "checkbox"/>
+                                </div>
+                                
+                                <div class = "failure_saves">
+                                    <p>failures</p>
+                                    <input id = "success_one" name = "success_one" type = "checkbox"/>
+                                    <input id = "success_two" name = "success_two" type = "checkbox"/>
+                                    <input id = "success_three" name = "success_three" type = "checkbox"/>
+                                </div>
+
+                                
+                            <p>Death saves</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea id = "Attacks_spellcasting"></textarea>
+                        <label for = "Attacks_spellcasting">Attacks & Spellcasting</label>
+                    </div>
+
+                    <div>
+                        <textarea id = "equipment"></textarea>
+                        <label for = "equipment">Equipment</label>
+                    </div>
+
+                    
+                </div>
+
+                <div class = "right_row">
+
+                </div>
+            </div>
         </main>
 
         <footer>

@@ -1,44 +1,412 @@
-input[type = text]
+/*input[type = text]
 {
-    width: 15ch;
+    width: 25ch;
 }
 
 input[type = number]
 {
-    width: 10ch;
-}
-
-.character_info_list
-{
-    list-style:  none;
-    height: 8rem;
-
-    margin-top: 0;
-    padding: 1rem;
-
-    border : 1px solid black;
-    border-radius : 5px;
-
-    display : grid;
-    grid-template-columns: 10rem 10rem 10rem;
-}
-
-.character_name
-{
-    height: 5rem;
-    padding : 1rem;
-
-    border : 1px solid black;
-    border-radius : 5px;
-    margin-right: -5px;
-
-    align-self: center;
-}
-
+    width: 25ch;
+}*/
 
 header
 {
     display: flex;
     flex-direction: row;
+    
     justify-content: center;
+}
+
+.character_info_list
+{
+    text-align: center;
+    align-items : center;
+
+    list-style:  none;
+    height: 8rem;
+    background-color: white;
+
+    margin-top: 0;
+    padding: .5rem;
+
+    border : 1px solid black;
+    border-radius : 5px;
+
+    display : grid;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-template-rows: 4rem 4rem;
+}
+
+
+.character_name
+{
+    display: flex;
+
+    text-align: center;
+
+    height: 5rem;
+    width: 20rem;
+    padding : .5rem;
+
+    border : 1px solid black;
+
+    border-radius : 5px;
+    margin-right: -5px;
+
+    align-items: center;
+}
+
+.character_info_list .character_name input
+{
+    width: 25ch;
+}
+
+.character_name input
+{
+    width: 40ch;
+}
+
+.character_portrait
+{
+    width: 200px;
+    height: 200px;
+
+    margin-left: 5rem;
+}
+
+.body
+{
+    display : flex;
+    justify-content: center;
+    gap : 20px;
+}
+
+.left_row_top
+{
+    width : 18rem;
+    padding : 1rem;
+
+    display: flex;
+    justify-content : flex-start;
+    gap : 2rem;
+}
+
+.left_row_bot
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+}
+
+#other_proficiencies
+{
+    width: 20rem;
+    height: 10rem;
+    resize: none;
+}
+
+.left_row
+{
+    display: flex;
+    flex-direction: column;
+    padding : 1rem;
+    gap : 1rem;
+    width : 20rem;
+
+    background-color: rgba(5, 27, 56, 0.212) ;
+}
+
+.middle_row
+{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(5, 27, 56, 0.212) ;
+    width : 20rem;
+
+    padding : 1rem;
+    gap : 1rem;
+
+    text-align: center;
+}
+
+.first_line
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.first_line_button
+{
+    border : 2px solid black;
+    text-align: center;
+}
+
+.first_line input
+{
+    height: 11ch;
+    width: 11ch;
+
+    border: none;
+
+    text-align: center;
+}
+
+.hitpoints
+{
+    gap : .2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.current_hitpoints
+{
+    display: flex;
+    flex-direction: column;
+
+    gap : 2rem;
+    border : 2px solid black;
+    border-radius: 10px 10px 0px 0px;
+
+    padding: 1ch;
+
+    height: 12ch;
+    background-color: white;
+}
+
+.current_hitpoints input
+{
+    border: none;
+    text-align: center;
+}
+
+.temp_hit_points
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    border : 2px solid black;
+    border-radius: 0px 0px 10px 10px;
+
+    padding: 1ch;
+    gap : 1ch;
+
+    text-align: center;
+    height: 12ch;
+    background-color: white;
+}
+
+#hitpoints_max
+{
+    width: 10ch;
+    height: 3ch;
+}
+
+#hitpoints_temp
+{
+    width: 10ch;
+    height: 3ch;
+
+    border: none;
+    text-align: center;
+}
+
+.third_line
+{
+    display: flex;
+    flex-direction: row;
+
+    gap : 1rem;
+}
+
+.hit_dice
+{
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    border : 1px solid black;
+    width: 10rem;
+    height: 6rem;
+    padding : 1ch;
+
+    gap: .5ch;
+    font-size: small;
+    text-align: center;
+}
+
+#hit_dice_total
+{
+    width: 15ch;
+}
+
+#hit_dice_input
+{
+    width: 9rem;
+    height: 5ch;
+
+    text-align: center;
+}
+
+.death_saves
+{
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    border : 1px solid black;
+    width: 10rem;
+    height: 6rem;
+    padding: 1ch;
+
+
+    font-size: small;
+    text-align: center;
+}
+
+.successes_save
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    height: 6ch;
+    margin-top: -1ch;
+    margin-bottom:  -1ch;
+}
+
+.failure_saves
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    height: 6ch;
+    margin-top: -1ch;
+    margin-bottom: -1ch;
+}
+
+#Attacks_spellcasting
+{
+    width: 20rem;
+    height: 10rem;
+    resize: none;
+}
+
+#equipment
+{
+    width: 20rem;
+    height: 10rem;
+    resize: none;
+}
+.right_row
+{
+    border : 1px solid black;
+    width : 20rem;
+
+    padding : 1rem;
+}
+
+#inspiration
+{
+    width: 3ch;
+    height: 3ch;
+}
+
+#perception_passive_widsom
+{
+    width: 3ch;
+    height: 3ch;
+}
+
+#proficiency_bonus
+{
+    width: 3ch;
+    height: 3ch;
+}
+
+.left_row_left
+{
+    display : flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: .6rem;
+}
+
+.left_row_right
+{
+    display: flex;
+    flex-direction:  column;
+    gap : 1rem;
+}
+
+.saving_throws{
+    border : 1px solid black;
+    border-radius : 5px;
+
+    padding : .3rem;
+
+    text-align: center;
+}
+
+.saving_throws input
+{
+    width: 2ch;
+    height: 2ch;
+}
+
+.saving_throws_align_left
+{
+    text-align: left;
+    font-size: small;
+}
+
+.skills
+{
+    border : 1px solid black;
+    border-radius : 5px;
+
+    padding : .3rem;
+    text-align: center;
+}
+
+.skills input
+{
+    width: 2ch;
+    height: 2ch;
+}
+
+.skills_align_left
+{
+    text-align: left;
+    font-size: small;
+}
+
+.stat_input
+{
+    width: 8ch;
+    height: 8.5ch;
+
+    border: none;
+    text-align: center;
+}
+
+.stat_square
+{
+    border : 2px solid black;
+    width: 11ch;
+    text-align: center;
+}
+
+.stat_bonus
+{
+     border : 1px solid black;
+    border-radius : 20px;
+
+    width: 5ch;
+    height: 4ch;
 }
