@@ -16,6 +16,12 @@ header
     justify-content: center;
 }
 
+.title_and_name
+{
+    display: flex;
+    flex-direction: column;
+}
+
 .character_info_list
 {
     text-align: center;
@@ -46,6 +52,7 @@ header
     height: 5rem;
     width: 20rem;
     padding : .5rem;
+    margin-top: -1rem;
 
     border : 1px solid black;
 
@@ -152,6 +159,11 @@ header
     border: none;
 
     text-align: center;
+}
+
+.middle_row_first_line_input
+{
+    text-align: left;
 }
 
 .hitpoints
@@ -297,18 +309,25 @@ header
     resize: none;
 }
 
+.equipment_and_money
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.money input
+{
+    width: 3rem;
+    height: 1.7rem;
+    text-align: center;
+    font-size: 1.2em;
+}
+
 #equipment
 {
-    width: 20rem;
-    height: 10rem;
+    width: 15.5rem;
+    height: 20rem;
     resize: none;
-}
-.right_row
-{
-    border : 1px solid black;
-    width : 20rem;
-
-    padding : 1rem;
 }
 
 #inspiration
@@ -409,4 +428,49 @@ header
 
     width: 5ch;
     height: 4ch;
+}
+
+.right_row
+{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(5, 27, 56, 0.212) ;
+    width : 20rem;
+
+    padding : 1rem;
+    gap : 1rem;
+
+    text-align: center;
+}
+
+.character_behaviour
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.character_behaviour textarea
+{
+    width: 20rem;
+    height: 6rem;
+    resize: none;
+}
+
+.personality_traits
+{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.flaws
+{
+    border-radius: 0px 0px 10px 10px;
+}
+
+#feats_and_traits
+{
+    width: 20rem;
+    height: 32.5rem;
+    resize: none;
 }

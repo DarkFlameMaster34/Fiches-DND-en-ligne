@@ -8,22 +8,26 @@
     </head>
     <body>
         <header>
-            <div>
-            </div>
-            <div class = "character_name">
-                <!--Name of the character-->
+            <div class = "title_and_name">
                 <div>
-                    <input type="text" id="name" name = "name" size = "20/>
-                    <label for="name"><br>Character Name</label>
+                    <h3>Dungeon & Dragons character sheet</h2>
+                </div>
+
+                <div class = "character_name">
+                    <!--Name of the character-->
+                    <div>
+                        <input type="text" id="name" name = "name" size = "20/>
+                        <label for="name"><br>Character Name</label>
+                    </div>
                 </div>
             </div>
-
+                
             <div class = "character_infos">
 
                     <ul class = "character_info_list">
                         <!--Class & level of the character-->
                         <li>
-                            <input type="text" id="class_level" name = "class_level" size = "10"/>
+                            <input type="text" id="class_level" name = "class_level"/>
                             <label for="class"><br>Class & Level</label>
                         </li>
                         
@@ -60,9 +64,9 @@
                 </div>
             </div>
 
-            <div class = character_image>
+           <!-- <div class = character_image>
                 <img class = "character_portrait" src="C:\Users\verpo\Documents\Fiches-DND-en-ligne\Images\Astarion.jpg"/>
-            </div>
+            </div>-->
             
         </header>
         <main>
@@ -249,17 +253,17 @@
                 <div class = "middle_row">
                     <div class = "first_line">
                         <div class = "first_line_button">
-                            <input id = "armor_class" name = 'armor_class' type = "number"/>
+                            <input id = "armor_class" name = 'armor_class' type = "number" class = "middle_row_first_line_input" style = "font-size: 2em; width: 3em; height: 3em; text-align: center;"/>
                             <label for="armor_class">Armor class</label>
                         </div>
 
                         <div class = "first_line_button">
-                            <input id = "initiative" name = 'initiative'  type = "number"/>
+                            <input id = "initiative" name = 'initiative'  type = "number" class = "middle_row_first_line_input" style = "font-size: 2em; width: 3em; height: 3em; text-align: center;"/>
                             <label for="initiative">Initiative</label>
                         </div>
                             
                         <div class = "first_line_button">
-                            <input id = "speed" name = 'speed'  type = "number"/>
+                            <input id = "speed" name = 'speed'  type = "number" class = "middle_row_first_line_input" style = "font-size: 2em; width: 3em; height: 3em; text-align: center;"/>
                             <label for="speed">Speed</label>
                         </div>
                     </div>
@@ -324,16 +328,69 @@
                         <label for = "Attacks_spellcasting">Attacks & Spellcasting</label>
                     </div>
 
-                    <div>
-                        <textarea id = "equipment"></textarea>
-                        <label for = "equipment">Equipment</label>
+                    <div class = "equipment_and_money"> 
+                        <div class = "money">
+                            <div>
+                                <input id = "CP" name = "CP">
+                                <label for = "CP">CP</label>
+                            </div>
+
+                            <div>
+                                <input id = "SP" name = "SP">
+                                <label for = "SP">SP</label>
+                            </div>
+
+                            <div>
+                                <input id = "EP" name = "EP">
+                                <label for = "EP">EP</label>
+                            </div>
+
+                            <div>
+                                <input id = "GP" name = "GP">
+                                <label for = "GP">GP</label>
+                            </div>
+
+                            <div>
+                                <input id = "PP" name = "PP">
+                                <label for = "PP">PP</label>
+                            </div>
+                        </div>
+                        <div>
+                            <textarea id = "equipment"></textarea>
+                            <label for = "equipment">Equipment</label>
+                        </div>
                     </div>
 
                     
                 </div>
 
                 <div class = "right_row">
+                    <div class = "character_behaviour">
+                        <div>
+                            <textarea id = "personality_traits" class = "personality_traits"></textarea>
+                            <label for = "personality_traits">Personality traits</label>
+                        </div>
+                        
+                        <div>
+                            <textarea id = "ideals" class = "ideals"></textarea>
+                            <label for = "ideals">Ideals</label>
+                        </div>
+                        
+                        <div>
+                            <textarea id = "bonds" class = "bonds"></textarea>
+                            <label for = "bonds">Bonds</label>
+                        </div>
+                        
+                        <div >
+                            <textarea id = "flaws" class = "flaws"></textarea>
+                            <label for = "flaws">Flaws</label>
+                        </div>
+                    </div>
 
+                    <div>
+                        <textarea id = "feats_and_traits"></textarea>
+                        <label for = "feats_and_traits">Features & Traits</label>
+                    </div>
                 </div>
             </div>
         </main>
